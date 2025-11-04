@@ -1,118 +1,161 @@
-# MERN Ecommerce
+🛍️ MERN E-Commerce Store
+📖 Description
 
-## Description
+This is a modern, full-stack eCommerce web application built using the MERN stack (MongoDB, Express, React, Node.js).
+It features user, merchant, and admin dashboards, allowing different users to interact seamlessly within a unified store system.
 
-An ecommerce store built with MERN stack, and utilizes third party API's. This ecommerce store enable three main different flows or implementations:
+The project is fully modular, responsive, and optimized for both performance and scalability.
 
-1. Buyers browse the store categories, products and brands
-2. Sellers or Merchants manage their own brand component
-3. Admins manage and control the entire store components 
+🚀 Key Features
+🧑‍💻 User (Customer)
 
-### Features:
+Browse products, categories, and brands
 
-  * Node provides the backend environment for this application
-  * Express middleware is used to handle requests, routes
-  * Mongoose schemas to model the application data
-  * React for displaying UI components
-  * Redux to manage application's state
-  * Redux Thunk middleware to handle asynchronous redux actions
+Add products to cart or wishlist
 
-## Demo
+Manage profile, addresses, and orders
 
-This application is deployed on Vercel Please check it out :smile: [here](https://mern-store-gold.vercel.app).
+View and track order status
 
-See admin dashboard [demo](https://mernstore-bucket.s3.us-east-2.amazonaws.com/admin.mp4)
+Secure login and signup (JWT-based authentication)
 
-## Docker Guide
+🏪 Merchant (Seller)
 
-To run this project locally you can use docker compose provided in the repository. Here is a guide on how to run this project locally using docker compose.
+Manage their brand and products
 
-Clone the repository
-```
-git clone https://github.com/mohamedsamara/mern-ecommerce.git
-```
+Add, update, or remove items
 
-Edit the dockercompose.yml file and update the the values for MONGO_URI and JWT_SECRET
+View orders and customer analytics
 
-Then simply start the docker compose:
+🧑‍💼 Admin
 
-```
+Control all store components
+
+Manage users, brands, products, and orders
+
+Monitor store statistics and activities
+
+🛠️ Tech Stack
+Layer	Technologies Used
+Frontend	React, Redux, Redux-Thunk, Tailwind CSS
+Backend	Node.js, Express.js
+Database	MongoDB (Mongoose ODM)
+Authentication	JWT Tokens
+Hosting / Deployment	Vercel, MongoDB Atlas
+🧩 Features Overview
+
+🌐 Full MERN stack integration
+
+⚙️ RESTful API with Express & Node
+
+🧠 Redux for global state management
+
+🎨 Modern UI with React & Tailwind CSS
+
+🔐 Secure authentication and route protection
+
+📦 Product, order, and brand management
+
+📈 Dashboard analytics (admin & merchant)
+
+💬 Wishlist, address, and account management
+
+🧾 Integrated payment-ready structure
+
+🖥️ Demo
+
+The application is live on Vercel.
+👉 View Demo
+
+(Replace the above link with your live deployment.)
+
+⚙️ Installation Guide
+
+Clone the repository:
+
+git clone https://github.com/UtkarshJha17/E-Commerce-MERN.git
+cd mern-ecommerce
+
+
+Install all dependencies:
+
+npm install
+
+
+This installs both client and server dependencies automatically.
+
+🔑 Environment Setup
+
+Create a .env file inside both the client and server folders.
+Refer to these templates:
+
+Frontend .env Example
+
+Backend .env Example
+
+Make sure to include:
+
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+
+🧰 Development
+
+Run the app in development mode:
+
+npm run dev
+
+
+This will start both the frontend (React) and backend (Node) servers concurrently.
+
+🐳 Docker Support (Optional)
+
+You can also run the app with Docker Compose:
+
 docker-compose build
 docker-compose up
-```
-
-## Database Seed
-
-* The seed command will create an admin user in the database
-* The email and password are passed with the command as arguments
-* Like below command, replace brackets with email and password. 
-* For more information, see code [here](server/utils/seed.js)
-
-```
-npm run seed:db [email-***@****.com] [password-******] // This is just an example.
-```
-
-## Install
-
-`npm install` in the project root will install dependencies in both `client` and `server`. [See package.json](package.json)
-
-Some basic Git commands are:
-
-```
-git clone https://github.com/mohamedsamara/mern-ecommerce.git
-cd project
-npm install
-```
-
-## ENV
-
-Create `.env` file for both client and server. See examples:
-
-[Frontend ENV](client/.env.example)
-
-[Backend ENV](server/.env.example)
 
 
-## Vercel Deployment
+Before running, update MONGO_URI and JWT_SECRET in the docker-compose.yml file.
 
-Both frontend and backend are deployed on Vercel from the same repository. When deploying on Vercel, make sure to specifiy the root directory as `client` and `server` when importing the repository. See [client vercel.json](client/vercel.json) and [server vercel.json](server/vercel.json).
+🌱 Database Seed (Admin User)
 
-## Start development
+To create an admin user for testing:
 
-```
-npm run dev
-```
-
-## Languages & tools
-
-- [Node](https://nodejs.org/en/)
-
-- [Express](https://expressjs.com/)
-
-- [Mongoose](https://mongoosejs.com/)
-
-- [React](https://reactjs.org/)
-
-- [Webpack](https://webpack.js.org/)
+npm run seed:db [email@example.com] [password123]
 
 
-### Code Formatter
+This command adds an admin account to your database automatically.
 
-- Add a `.vscode` directory
-- Create a file `settings.json` inside `.vscode`
-- Install Prettier - Code formatter in VSCode
-- Add the following snippet:  
+🚀 Deployment
 
-```json
+This project can be deployed easily on Vercel for both frontend and backend.
 
-    {
-      "editor.formatOnSave": true,
-      "prettier.singleQuote": true,
-      "prettier.arrowParens": "avoid",
-      "prettier.jsxSingleQuote": true,
-      "prettier.trailingComma": "none",
-      "javascript.preferences.quoteStyle": "single",
-    }
+Set client root directory as client
 
-```
+Set server root directory as server
 
+Ensure vercel.json files exist in both folders
+
+🧹 Code Formatting
+
+Add a .vscode/settings.json file to enable Prettier formatting in VSCode:
+
+{
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.jsxSingleQuote": true,
+  "prettier.trailingComma": "none",
+  "javascript.preferences.quoteStyle": "single"
+}
+
+
+👨‍💻 Author
+
+Utkarsh Jha
+📧 [utkarshjha1722@gmail.com]
+🔗 https://github.com/UtkarshJha17
+
+⭐ Acknowledgment
+
+This project was originally inspired by the open-source MERN eCommerce template by Mohamed Samara, further customized and redesigned with new UI, dashboard enhancements, and improved frontend styling.
