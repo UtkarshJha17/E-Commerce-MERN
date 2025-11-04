@@ -56,14 +56,6 @@ The project is fully modular, responsive, and optimized for both performance and
 
 ---
 
-## 🖥️ Demo
-
-The application is live on Vercel.  
-👉 **[View Demo](https://your-vercel-demo-link.com)**  
-(Replace the above link with your live deployment.)
-
----
-
 ## ⚙️ Installation Guide
 
 ### 1️⃣ Clone the repository:
